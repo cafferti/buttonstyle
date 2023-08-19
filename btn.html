@@ -1,88 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>button active and inactive</title>
 
     <style>
-         .js-active{
-            background-color: rgb(236, 225, 225);
-            margin: 1rem 0.5rem;
-            color: rgb(8, 7, 7);
-            padding: 1rem;
-            padding-inline: 1rem;
-            font-weight:bold;
-            font-size: 15px;
-            border-radius: 1rem;
-            border: none
-        }
+      .js-active {
+        background-color: rgb(236, 225, 225);
+        margin: 1rem 0.5rem;
+        color: rgb(8, 7, 7);
+        padding: 1rem;
+        padding-inline: 1rem;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 1rem;
+        border: none;
+      }
 
-        
-        
-        .js-inactive1b ,.js-inactive2b ,.js-inactive3b{
-            background-color: black;
-            margin: 1rem 0.5rem;
-            color: white;
-            padding: 1rem;
-            padding-inline: 1rem;
-            font-weight:bold;
-            font-size: 15px;
-            border-radius: 1rem;
-            border: none;
-        }
+      .js-inactive1b,
+      .js-inactive2b,
+      .js-inactive3b {
+        background-color: black;
+        margin: 1rem 0.5rem;
+        color: white;
+        padding: 1rem;
+        padding-inline: 1rem;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 1rem;
+        border: none;
+      }
 
-        .js-active{
-            background-color: rgb(236, 225, 225);
-            margin: 1rem 0.5rem;
-            color: rgb(8, 7, 7);
-            padding: 1rem;
-            padding-inline: 1rem;
-            font-weight:bold;
-            font-size: 15px;
-            border-radius: 1rem;
-            border: none
-        }
-
-       
-
-
-
+      .js-active {
+        background-color: rgb(236, 225, 225);
+        margin: 1rem 0.5rem;
+        color: rgb(8, 7, 7);
+        padding: 1rem;
+        padding-inline: 1rem;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 1rem;
+        border: none;
+      }
     </style>
-</head>
-<body>
-    <button  onclick="active(`b1`)"  class=" js-inactive1b" >Gaming</button>
-    <button onclick="active(`b2`)"  class=" js-inactive2b" >Music</button>
-    <button  onclick="active(`b3`)" class=" js-inactive3b">Tech</button>
+  </head>
+  <body>
+    <button onclick="active(`b1`)" class="js-inactive1b">Gaming</button>
+    <button onclick="active(`b2`)" class="js-inactive2b">Music</button>
+    <button onclick="active(`b3`)" class="js-inactive3b">Tech</button>
 
-    
-<script>
-        function active(bn) {
+    <script>
+      function active(bn) {
+        var b1tn = document.querySelector(".js-inactive1b");
+        var b2tn = document.querySelector(".js-inactive2b");
+        var b3tn = document.querySelector(".js-inactive3b");
 
-            var b1tn = document.querySelector('.js-inactive1b');
-            var b2tn = document.querySelector('.js-inactive2b');
-            var b3tn = document.querySelector('.js-inactive3b');
-            
-
-            if(bn === `b1`){
-
-            
-            b1tn.classList.add('js-active');
-            b2tn.classList.remove('js-active');
-            b3tn.classList.remove('js-active');
-
-            }else if(bn === `b2`){
-             b1tn.classList.remove('js-active');
-            b2tn.classList.add('js-active');
-            b3tn.classList.remove('js-active');
-            }else if(bn === `b3`){
-            b1tn.classList.remove('js-active');
-            b2tn.classList.remove('js-active');
-            b3tn.classList.add('js-active');
-            }
-          
-        };
-
+        if (bn === `b1`) {
+          b1tn.classList.add("js-active");
+          b2tn.classList.remove("js-active");
+          b3tn.classList.remove("js-active");
+        } else if (bn === `b2`) {
+          b1tn.classList.remove("js-active");
+          b2tn.classList.add("js-active");
+          b3tn.classList.remove("js-active");
+        } else if (bn === `b3`) {
+          b1tn.classList.remove("js-active");
+          b2tn.classList.remove("js-active");
+          b3tn.classList.add("js-active");
+        }
+      }
     </script>
-</body>
+  </body>
 </html>
